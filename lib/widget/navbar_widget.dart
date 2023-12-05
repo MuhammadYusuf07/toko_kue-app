@@ -14,12 +14,54 @@ class NavbarWidget extends StatelessWidget {
       child: Container(
       height: 50.0,
       decoration: const BoxDecoration(
-      color: Colors.blue,
+      color: Color.fromARGB(255, 221, 222, 223),
       borderRadius: BorderRadius.only(
         topLeft: Radius.circular(25.0),
         topRight: Radius.circular(25.0),
       ),
       ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [ 
+          SizedBox(
+      height: 50.0,
+      width: MediaQuery.of(context).size.width / 2 - 40.0,
+      child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: const [ 
+        Icon(
+      Icons.home,
+      color: Color(0xFFEF7532),
+      ),
+        Icon(
+      Icons.search,
+      color: Color(0xFF676E79),
+      ),
+      ],
+      ),
+      ),
+      SizedBox( 
+        height: 50.0,
+        width: MediaQuery.of(context).size.width / 2 - 40.0,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: const [
+          Icon(
+          Icons.shopping_basket_outlined,
+          color:  Color(0xFF676E79),
+          ),
+          Icon(
+          Icons.person_outline,
+          color:  Color(0xFF676E79),
+          ),
+
+        ],
+        ),
+
+      )
+      ],
+      ),
+
       ),
       
     );
